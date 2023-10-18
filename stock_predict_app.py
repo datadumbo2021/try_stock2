@@ -9,7 +9,7 @@ st.title('반도체 주식 데이터 Dashboard')
 
 tickers = {'SK hynix': '000660.KS', 'Samsung Electronics': '005930.KS', 'NVIDIA Corporation': 'NVDA', 'QUALCOMM': 'QCOM'}
 
-selected_tickers = st.multiselect('Select the ticker symbols you want to visualize:', list(tickers.keys()))
+selected_tickers = st.multiselect('Select the ticker symbols you want to visualize:', list(tickers.keys()), default=list(tickers.keys())[0:2])
 
 start_date = st.date_input('Start Date', pd.to_datetime('2019-01-01'))
 end_date = st.date_input('End Date', pd.to_datetime('today'))
